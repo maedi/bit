@@ -1,0 +1,16 @@
+{
+  "name": "BitTwig",
+  "version": "1.0.0",
+  "description": "Not sure",
+  "main": "app.js",
+  "dependencies": {
+    "bittorrent-dht": "^2.6.4",
+    "magnet-uri": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MCHat",
+  "license": "ISC"
+}
