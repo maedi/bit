@@ -1,7 +1,7 @@
 //// AUTH ////
 
 var request = require('request');
-var bitauth = require('./node_modules/bitauth/lib/bitauth'); // not all of library
+var bitauth = require('./node_modules/bitauth/lib/bitauth'); // client-side library
 
 // These can be generated with bitauth.generateSin()
 var keys = {
@@ -11,7 +11,7 @@ var keys = {
 
 // GET
 
-for(k in keys) {
+for(var k in keys) {
   var url = 'http://localhost:3000/user';
   var dataToSign = url;
   var options = {
@@ -36,7 +36,7 @@ var pizzas = ['pepperoni', 'sausage', 'veggie', 'hawaiian'];
 
 // POST
 
-for(k in keys) {
+for(var k in keys) {
   var url = 'http://localhost:3000/pizzas';
   var data = {type: pizzas[Math.floor(Math.random() * pizzas.length)]};
   var dataToSign = url + JSON.stringify(data);
@@ -61,8 +61,8 @@ for(k in keys) {
 
 //// TORRENT ////
 
-//var DHT    = require('bittorrent-dht')
-//var magnet = require('magnet-uri')
+var DHT    = require('bittorrent-dht')
+var magnet = require('magnet-uri')
 //
 //var uri = 'magnet:?xt=urn:btih:e3811b9539cacff680e418124272177c47477157'
 //var parsed = magnet(uri)
