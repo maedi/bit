@@ -1,7 +1,7 @@
 //// AUTH ////
 
 var request = require('request');
-var bitauth = require('bitauth');
+var bitauth = require('./node_modules/bitauth/lib/bitauth'); // not all of library
 
 // These can be generated with bitauth.generateSin()
 var keys = {
